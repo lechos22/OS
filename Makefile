@@ -5,3 +5,9 @@ bootloader:
 	nasm -fbin ./bootloader.asm -o ./bootloader.bin
 test-bootloader:bootloader
 	qemu-system-x86_64 ./bootloader.bin
+git-up:
+	git add -A
+	git commit -am "-"
+	git push
+git-down:
+	git pull
